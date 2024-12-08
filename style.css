@@ -1,0 +1,141 @@
+/* impots */
+
+@font-face {
+    font-family: "Figtree";
+    src: url('assets/fonts/static/Figtree-SemiBold.ttf');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Figtree";
+    src: url('assets/fonts/static/Figtree-ExtraBold.ttf');
+    font-weight: 800;
+    font-style: normal;
+}
+
+
+/* global defaults */
+
+:root {
+    /* colors */
+    --yelow: hsl(47, 88%, 63%);
+    --white: hsl(0, 0%, 100%);
+    --gray-500: hsl(0, 0%, 42%);
+    --gray-950: hsl(0, 0%, 7%);
+
+    /* size */
+    font-size: 16px;
+    --ratio: 1.61;
+
+    --s-1: calc(var(--s0) / var(--ratio));
+    --s0: 1rem;
+    --s1: calc(var(--s0) * var(--ratio));
+    --s2: calc(var(--s1) * var(--ratio));
+
+    /* font */
+    font-weight: 500;
+    font-family: 'Figtree';
+    color: var(--gray-950);
+
+    /* mesure */
+    --mesure: 60ch;
+}
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: unset;
+}
+
+a:hover {
+    color: var(--yelow);
+}
+
+body {
+    background-color: var(--yelow);
+}
+
+p, h1 {
+    max-inline-size: var(--mesure);
+}
+
+/* layouts */
+
+.cover {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.stack-middle {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25em;
+}
+
+.stack-small {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75em;
+}
+
+.cluster {
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+
+}
+
+/* utility classes */
+
+h1.small {
+    font-size: var(--s1) !important;
+    font-weight: 800 !important;
+}
+
+div > strong {
+    font-weight: 800;
+}
+
+.half-mesure {
+    max-inline-size: 32ch;
+}
+
+.light-text {
+    color: var(--gray-500);
+}
+
+
+/* preview card classes */
+.preview-card {
+    background-color: var(--white);
+    border: 1px solid var(--gray-950);
+    border-radius: 1.5em;
+    padding: 1.25em;
+    box-shadow: 0.6em 0.6em var(--gray-950);
+}
+
+.preview-image {
+    inline-size: 20em;
+    border-radius: 0.6em;
+}
+
+.tag-badge {
+    background-color: var(--yelow);
+    border-radius: 0.25em;
+    padding-inline: 1em;
+    padding: 0.4em;
+    inline-size: fit-content;
+}
+
+.avatar {
+    width: var(--s1);
+    height: var(--s1);
+}
